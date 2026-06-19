@@ -84,8 +84,11 @@ export default function Sidebar({ activeView, onNavigate }) {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img
-              src="https://i.pravatar.cc/150?img=12"
-              alt="user"
+              import photo from "./photo.jpeg";
+
+              <img
+              src={photo}
+              alt="Suraj"
               className="w-12 h-12 rounded-full object-cover"
             />
             <div>
