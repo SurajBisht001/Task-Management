@@ -1,5 +1,6 @@
 import photo from "./photo.jpeg";
-
+import photo1 from "./photo1.jpeg";
+import logo from "./logo2.jpeg";
 export const initialUsers = [
   {
     id: "1",
@@ -22,7 +23,7 @@ export const initialUsers = [
     name: "Bhaskar",
     role: "Backend Developer",
     email: "bhaskar@taskora.com",
-    avatar: "https://i.pravatar.cc/150?img=15",
+    avatar: photo1,
     status: "Away",
   },
   {
@@ -30,7 +31,7 @@ export const initialUsers = [
     name: "Eshant",
     role: "Project Manager",
     email: "eshant@taskora.com",
-    avatar: "https://i.pravatar.cc/150?img=45",
+    avatar: logo2,
     status: "Online",
   },
   {
