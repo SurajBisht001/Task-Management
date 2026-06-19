@@ -1,10 +1,12 @@
+import photo from "./photo.jpeg";
+
 export const initialUsers = [
   {
     id: "1",
     name: "Suraj",
     role: "UI/UX Designer",
     email: "bishtsuraj751@gmail.com",
-    avatar: "./photo.jpeg",
+    avatar: photo,
     status: "Online",
   },
   {
