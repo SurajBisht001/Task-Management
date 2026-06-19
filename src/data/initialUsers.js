@@ -4,7 +4,7 @@ export const initialUsers = [
     name: "Suraj",
     role: "UI/UX Designer",
     email: "bishtsuraj751@gmail.com",
-    avatar: "/photo.jpeg",
+    avatar: "./photo.jpeg",
     status: "Online",
   },
   {
