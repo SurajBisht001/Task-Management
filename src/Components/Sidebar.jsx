@@ -90,7 +90,7 @@ export default function Sidebar({ activeView, onNavigate }) {
             />
             <div>
               <h3 className="text-sm font-semibold">Suraj</h3>
-              <p className="text-xs text-gray-500">suraj@gmail.com</p>
+              <p className="text-xs text-gray-500">bishtsuraj751@gmail.com</p>
             </div>
           </div>
 
