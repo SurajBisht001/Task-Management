@@ -1,17 +1,3 @@
-// src/components/Sidebar.jsx
-import { motion } from "framer-motion";
-<motion.button
-
-whileHover={{
-x:8
-}}
-
-whileTap={{
-scale:.97
-}}
->
-
-</motion.button>
 import {
   FiHome,
   FiFolder,
@@ -25,58 +11,33 @@ import {
 } from "react-icons/fi";
 
 const menuItems = [
-  {
-    title: "Overview",
-    icon: <FiHome size={20} />,
-    active: true,
-  },
-  {
-    title: "Projects",
-    icon: <FiFolder size={20} />,
-  },
-  {
-    title: "Tasks",
-    icon: <FiCheckSquare size={20} />,
-  },
-  {
-    title: "Reporting",
-    icon: <FiPieChart size={20} />,
-  },
-  {
-    title: "Users",
-    icon: <FiUsers size={20} />,
-  },
+  { id: "dashboard", title: "Overview", icon: <FiHome size={20} /> },
+  { id: "projects", title: "Projects", icon: <FiFolder size={20} /> },
+  { id: "tasks", title: "Tasks", icon: <FiCheckSquare size={20} /> },
+  { id: "reporting", title: "Reporting", icon: <FiPieChart size={20} /> },
+  { id: "users", title: "Users", icon: <FiUsers size={20} /> },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ activeView, onNavigate }) {
+  const isBottomActive = (view) => activeView === view;
+
   return (
     <div className="h-full flex flex-col justify-between px-6 py-8 bg-[#050505] rounded-[30px]">
-      {/* Logo */}
       <div>
         <div className="flex items-center gap-3 mb-14">
           <div className="w-10 h-10 rounded-xl bg-linear-to-br from-[#6F4EF2] to-white flex items-center justify-center">
             <div className="w-5 h-5 rounded-full bg-white"></div>
           </div>
-
           <h1 className="text-3xl font-bold tracking-wide">Taskora</h1>
         </div>
-<div className="
-absolute
-left-0
-top-1/2
--translate-y-1/2
-w-1.5
-h-10
-rounded-r-full
-bg-[#00C16A]
-"/>
-        {/* Navigation */}
+
         <nav className="space-y-4">
           {menuItems.map((item) => (
             <button
-              key={item.title}
+              key={item.id}
+              onClick={() => onNavigate(item.id)}
               className={`w-full flex items-center justify-between px-5 py-4 rounded-2xl transition-all duration-300 ${
-                item.active
+                activeView === item.id
                   ? "bg-[#1FC77A] text-black font-semibold"
                   : "text-gray-300 hover:bg-[#151515]"
               }`}
@@ -85,31 +46,41 @@ bg-[#00C16A]
                 {item.icon}
                 <span>{item.title}</span>
               </div>
-
               <FiChevronDown />
             </button>
           ))}
         </nav>
       </div>
 
-      {/* Bottom */}
       <div>
         <div className="space-y-3">
-          <button className="flex items-center gap-4 text-gray-300 hover:text-white transition">
+          <button
+            onClick={() => onNavigate("support")}
+            className={`flex items-center gap-4 transition w-full px-2 py-2 rounded-xl ${
+              isBottomActive("support")
+                ? "text-[#00C16A] font-semibold"
+                : "text-gray-300 hover:text-white"
+            }`}
+          >
             <FiHelpCircle size={20} />
             <span>Support</span>
           </button>
 
-          <button className="flex items-center gap-4 text-gray-300 hover:text-white transition">
+          <button
+            onClick={() => onNavigate("settings")}
+            className={`flex items-center gap-4 transition w-full px-2 py-2 rounded-xl ${
+              isBottomActive("settings")
+                ? "text-[#00C16A] font-semibold"
+                : "text-gray-300 hover:text-white"
+            }`}
+          >
             <FiSettings size={20} />
             <span>Settings</span>
           </button>
         </div>
 
-        {/* Divider */}
         <div className="border-t border-[#1f1f1f] my-8"></div>
 
-        {/* User */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img
@@ -117,12 +88,9 @@ bg-[#00C16A]
               alt="user"
               className="w-12 h-12 rounded-full object-cover"
             />
-
             <div>
               <h3 className="text-sm font-semibold">Suraj</h3>
-              <p className="text-xs text-gray-500">
-                suraj@gmail.com
-              </p>
+              <p className="text-xs text-gray-500">suraj@gmail.com</p>
             </div>
           </div>
 

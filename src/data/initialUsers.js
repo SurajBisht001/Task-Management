@@ -1,0 +1,42 @@
+export const initialUsers = [
+  {
+    id: "1",
+    name: "Mohamed",
+    role: "UI/UX Designer",
+    email: "mohamed@taskora.com",
+    avatar: "https://i.pravatar.cc/150?img=12",
+    status: "Online",
+  },
+  {
+    id: "2",
+    name: "Sarah",
+    role: "Frontend Developer",
+    email: "sarah@taskora.com",
+    avatar: "https://i.pravatar.cc/150?img=32",
+    status: "Online",
+  },
+  {
+    id: "3",
+    name: "David",
+    role: "Backend Developer",
+    email: "david@taskora.com",
+    avatar: "https://i.pravatar.cc/150?img=15",
+    status: "Away",
+  },
+  {
+    id: "4",
+    name: "Emily",
+    role: "Project Manager",
+    email: "emily@taskora.com",
+    avatar: "https://i.pravatar.cc/150?img=45",
+    status: "Online",
+  },
+  {
+    id: "5",
+    name: "Suraj",
+    role: "Product Designer",
+    email: "suraj@gmail.com",
+    avatar: "https://i.pravatar.cc/150?img=12",
+    status: "Online",
+  },
+];
