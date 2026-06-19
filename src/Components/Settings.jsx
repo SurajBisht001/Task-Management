@@ -6,7 +6,7 @@ const settingsSections = [
     title: "Profile",
     fields: [
       { label: "Full Name", value: "Suraj", type: "text" },
-      { label: "Email", value: "suraj@gmail.com", type: "email" },
+      { label: "Email", value: "bishtsuraj751@gmail.com", type: "email" },
       { label: "Role", value: "Product Designer", type: "text" },
     ],
   },
