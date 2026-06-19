@@ -61,7 +61,7 @@ export default function UserList({ onAddUser }) {
                 >
                   {user.status === "Online" ? <FiToggleRight size={18} /> : <FiToggleLeft size={18} />}
                 </button>
-                {user.email !== "suraj@gmail.com" && (
+                {user.email !== "bishtsuraj751@gmail.com" && (
                   <button
                     onClick={() => deleteUser(user.id)}
                     className="w-9 h-9 rounded-full bg-[#1B1B1B] flex items-center justify-center text-gray-500 hover:text-red-400 transition opacity-0 group-hover:opacity-100"
